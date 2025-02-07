@@ -1,7 +1,7 @@
 # NFC Reader App
 
 ## Overview
-The **NFC Reader App** is an Android application built using **Jetpack Compose** and **MVVM architecture** to read and process NFC (Near Field Communication) tags. It allows users to scan NFC-enabled cards and view the extracted details, including card ID, type, and features. The app also includes a manual button to simulate an NFC scan without requiring a physical NFC tag.
+The **NFC Reader App** is an Android application built using **Kotlin** and **Jetpack Compose** to read and process NFC (Near Field Communication) tags. It allows users to scan NFC-enabled cards and view the extracted details, including card ID, type, and features. The app also includes a manual button to simulate an NFC scan without requiring a physical NFC tag.
 
 ## Features
 - **Real-time NFC scanning** using Android's NFC API.
