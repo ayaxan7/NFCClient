@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "736065391455",
+    "project_id": "nfcclient-67fa3",
+    "storage_bucket": "nfcclient-67fa3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736065391455:android:95f487ea9df521ceef04ea",
+        "android_client_info": {
+          "package_name": "com.hustle.nfcclient"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrZ_yGavWvquj7gDNcVyU4BpEx0eB6iME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
