@@ -41,7 +41,7 @@ The **NFC Reader App** is an Android application built using **Kotlin** and **Je
 - It will generate a mock NFC tag scan with predefined card data.
 
 ## Screenshots
-
+ <img src="screenshots/PRE_NFC_SCAN.jpg" alt="Pre Scan" width="300">  <img src="screenshots/NFC_SCANNED.jpg" alt="Scan Success" width="300">
 
 ## Contributors
 - **Syed Mohammad Ayaan** ([@ayaxan7](https://github.com/ayaxan7))
