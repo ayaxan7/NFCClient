@@ -1,19 +1,21 @@
 package com.hustle.nfcclient
 
-
-
+import android.content.Context
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import com.google.android.gms.location.LocationServices
 import com.hustle.nfcclient.network.NFCCardInfo
 import com.hustle.nfcclient.network.NFCViewModel
 
 @Composable
 fun NFCReaderApp(viewModel: NFCViewModel) {
     val scanResult by viewModel.scanResult.collectAsState()
+    val context = LocalContext.current // Get the current Context
 
     Surface(
         modifier = Modifier.fillMaxSize(),
@@ -41,7 +43,11 @@ fun NFCReaderApp(viewModel: NFCViewModel) {
                         cardType = "MIFARE Classic 1K",
                         features = "UID size: single, Regular frame, 106 kbit/s"
                     )
-                    viewModel.processNFCTag(testCardInfo, null) // No location data
+
+                    val fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
+                    fusedLocationClient.lastLocation.addOnSuccessListener { location ->
+                        viewModel.processNFCTag(testCardInfo, location)
+                    }
                 }
             ) {
                 Text("Simulate NFC Scan")
